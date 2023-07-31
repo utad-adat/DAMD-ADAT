@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,6 +11,7 @@ public class U1ReadFile {
 
     public static void main(String[] args) {
         readTextFileSequentially();
+        readTextFileSequentiallyWithBufferedReader();
     }
 
     private static void readTextFileSequentially() {
@@ -16,7 +19,18 @@ public class U1ReadFile {
         try {
             List<String> lines = Files.readAllLines(rutaFichero);
             for (String line : lines) {
-                // Procesar cada línea del fichero
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Error al leer el fichero: " + e.getMessage());
+        }
+    }
+
+    private static void readTextFileSequentiallyWithBufferedReader() {
+        Path rutaFichero = Paths.get(FILE_PATH);
+        try (BufferedReader reader = new BufferedReader(new FileReader(rutaFichero.toFile()))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException e) {
