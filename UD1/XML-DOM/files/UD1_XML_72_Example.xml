@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marcas>
+    <marca>
+        <nombre>Volkswagen</nombre>
+        <modelos>
+            <modelo>Golf</modelo>
+            <modelo>Polo</modelo>
+            <modelo>Beetle</modelo>
+        </modelos>
+    </marca>
+    <marca>
+        <nombre>Audi</nombre>
+        <modelos>
+            <modelo>A4</modelo>
+            <modelo>A6</modelo>
+            <modelo>A8</modelo>
+        </modelos>
+    </marca>
+    <marca>
+        <nombre>Mercedes-Benz</nombre>
+        <modelos>
+            <modelo>C-Class</modelo>
+            <modelo>E-Class</modelo>
+            <modelo>S-Class</modelo>
+        </modelos>
+    </marca>
+</marcas>
